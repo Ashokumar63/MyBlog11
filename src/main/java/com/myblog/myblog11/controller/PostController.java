@@ -23,9 +23,11 @@ public class PostController {
         return new ResponseEntity<>(dto, HttpStatus.CREATED);
     }
 
+    //http://localhost:8080/api/posts?id=1
     @GetMapping
    public ResponseEntity<PostDto> getPostById(@RequestParam long id){
-        postService.getPostById(id);
+        PostDto dto = postService.getPostById(id);
+        return new ResponseEntity<>(dto,HttpStatus.OK);
    }
 
 }
