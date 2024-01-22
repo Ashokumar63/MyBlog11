@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostServiceImpl implements PostService {
 
+
     private PostRepository postRepository;
 
     public PostServiceImpl(PostRepository postRepository) {
@@ -28,5 +29,11 @@ public class PostServiceImpl implements PostService {
         dto.setDescription(savedPost.getDescription());
         dto.setContent(savedPost.getContent());
         return dto;
+    }
+
+    @Override
+    public PostDto getPostById(long id) {
+
+        return null;
     }
 }
